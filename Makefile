@@ -1,11 +1,11 @@
 VERSION = 0.0.1
 
 build:
-	docker build -t mongrel:$(VERSION) ./
-	docker tag mongrel:$(VERSION) $(USER)/mongrel:$(VERSION)
+	docker build -t gorel:$(VERSION) ./
+	docker tag gorel:$(VERSION) $(USER)/gorel:$(VERSION)
 
 push:
-	docker push $(USER)/mongrel:$(VERSION)
+	docker push $(USER)/gorel:$(VERSION)
 
 clean:
-	docker rmi $(USER)/mongrel:$(VERSION)
+	docker rmi $(USER)/gorel:$(VERSION)
